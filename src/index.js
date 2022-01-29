@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
+import NavigationBar from './components/navigationBar';
+import { BrowserRouter } from 'react-router-dom';
+import logger from './Services/logService';
+
+console.log("SUPERMAN",process.env.REACT_APP_NAME);
+console.log(process.env);
+logger.init();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter> 
+    <NavigationBar />
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
